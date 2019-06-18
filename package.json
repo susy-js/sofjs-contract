@@ -1,0 +1,147 @@
+{
+  "_from": "sofjs-contract@0.0.1",
+  "_id": "sofjs-contract@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-9RfmYlaW4iHCiQooq5y5rUH8Dtk=",
+  "_location": "/sofjs-contract",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "sofjs-contract@0.0.1",
+    "name": "sofjs-contract",
+    "escapedName": "sofjs-contract",
+    "rawSpec": "0.0.1",
+    "saveSpec": null,
+    "fetchSpec": "0.0.1"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/sofjs-contract/-/sofjs-contract-0.0.1.tgz",
+  "_shasum": "f517e6625696e221c2890a28ab9cb9ad41fc0ed9",
+  "_spec": "sofjs-contract@0.0.1",
+  "_where": "/home/user",
+  "author": {
+    "name": "Nick Dodson",
+    "email": "nick.dodson@consensys.net"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ]
+        }
+      ]
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/silentcicero/sofjs-contract/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "sofjs-abi": "0.0.1",
+    "sofjs-filter": "0.0.1",
+    "sofjs-query": "0.0.2",
+    "sofjs-sha3": "0.0.1",
+    "sofjs-util": "0.0.3"
+  },
+  "deprecated": false,
+  "description": "A simple contract object for the Sophon RPC.",
+  "devDependencies": {
+    "babel-eslint": "7.1.0",
+    "chai": "3.5.0",
+    "coveralls": "2.11.9",
+    "eslint": "2.10.1",
+    "eslint-config-airbnb": "9.0.1",
+    "eslint-import-resolver-webpack": "0.2.4",
+    "eslint-plugin-import": "1.8.0",
+    "eslint-plugin-jsx-a11y": "1.2.0",
+    "eslint-plugin-react": "5.1.1",
+    "sophonjs-testrpc": "^3.0.2",
+    "sofjs-abi": "0.0.1",
+    "sofjs-query": "0.0.2",
+    "sofjs-sha3": "0.0.1",
+    "sofjs-util": "0.0.2",
+    "eventsource-polyfill": "0.9.6",
+    "lint-staged": "1.0.1",
+    "mocha": "3.1.2",
+    "pre-commit": "1.1.3"
+  },
+  "engines": {
+    "node": ">=6.5.0",
+    "npm": ">=3"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "node": true,
+      "mocha": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "import/no-unresolved": 2,
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "no-console": 1,
+      "max-len": 0,
+      "prefer-template": 2,
+      "no-use-before-define": 0,
+      "newline-per-chained-call": 0,
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ]
+    }
+  },
+  "homepage": "https://github.com/silentcicero/sofjs-contract#readme",
+  "keywords": [
+    "sophon",
+    "events",
+    "rpc"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "lint:eslint": "*.js"
+  },
+  "main": "src/index.js",
+  "name": "sofjs-contract",
+  "pre-commit": "lint:staged",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/silentcicero/sofjs-contract.git"
+  },
+  "scripts": {
+    "coveralls": "cat ./coverage/lcov/lcov.info | coveralls",
+    "lint": "npm run lint:js",
+    "lint:eslint": "eslint --ignore-path .gitignore",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:staged": "lint-staged",
+    "pretest": "npm run lint",
+    "release": "npmpub",
+    "start": "npm test",
+    "test": "mocha src/tests/**/*.js -R spec --timeout 2000000"
+  },
+  "version": "0.0.1"
+}
